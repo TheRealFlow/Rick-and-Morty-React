@@ -1,12 +1,22 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.css';
 import CharacterGallery from "./components/CharacterGallery";
+import axios from "axios";
 
 
 function App() {
-  return (
+    const [character, setCharacter] = useState([]);
+
+    useEffect( () => {
+        axios.get("https://rickandmortyapi.com/api/character")
+        .then(response => response.data)
+        .then((data) => setCharacter(data.results))
+        .catch(error => console.error(error))
+    }, [character])
+
+    return (
       <>
-      <CharacterGallery />
+      <CharacterGallery character={character}/>
       </>
   );
 }

@@ -1,10 +1,11 @@
+import {Card} from "./Card";
 
-export default function CharacterCard(props: {name: string, image: string, origin: string}) {
+export default function CharacterCard({name, image, status} : Card) {
  return (
         <div className={"Card"}>
-            <h2>{props.name}</h2>
-            <img src={props.image}/>
-            <p>{props.origin}</p>
+            <h2>{name}</h2>
+            <img src={image}/>
+            <p>{status}</p>
         </div>
         )
 }

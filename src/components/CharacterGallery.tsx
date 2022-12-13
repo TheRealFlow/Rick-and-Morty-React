@@ -1,11 +1,11 @@
-import {Character} from "./characters";
+import {Card} from "./Card";
 import CharacterCard from "./CharacterCard"
 
-export default function CharacterGallery() {
+export default function CharacterGallery({character} : {character: Card[]}) {
     return (
         <ul className={"Gallery"}>
-            {Character.map(people => (
-                <CharacterCard key={people.id} name={people.name} image={people.image} origin={people.location.name}/>
+            {character.map(people => (
+                <CharacterCard key={people.name} {...people}/>
             ))}
         </ul>
     )
