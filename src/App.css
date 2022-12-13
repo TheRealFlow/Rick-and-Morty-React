@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+
+.Card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 320px;
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.name {
+  margin: 0;
+}
+
+.image {
+  margin: 10px;
+  position: center;
+}
+
+.origin {
+  margin: 0;
+}
+
+.Gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 60%;
+  margin-left: 15%;
+}
