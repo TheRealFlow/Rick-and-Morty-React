@@ -1,3 +1,4 @@
+
 export const Character = [
   {
     "id": 1,
