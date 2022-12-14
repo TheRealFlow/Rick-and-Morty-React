@@ -14,3 +14,13 @@
   align-items: center;
   gap: 20px;
 }
+
+.Input {
+  margin-left: 49rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding: 1rem 5rem;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+}

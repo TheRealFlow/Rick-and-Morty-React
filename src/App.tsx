@@ -12,12 +12,10 @@ function App() {
         .then(response => response.data)
         .then((data) => setCharacter(data.results))
         .catch(error => console.error(error))
-    }, [character])
+    }, [])
 
     return (
-      <>
       <CharacterGallery character={character}/>
-      </>
   );
 }
 
