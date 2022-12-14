@@ -5,10 +5,9 @@ import {useState} from "react";
 export default function CharacterGallery({character} : {character: Card[]}) {
     const [search, setSearch] = useState("");
 
-
     return (
         <>
-            <input className={"Input"} placeholder={"Search Character"} type="search" value={search} onChange={event => setSearch(event.target.value)}/>
+            <input type="search" placeholder={"Search Character"} onChange={event => setSearch(event.target.value)}/>
             <ul className={"Gallery"}>
                 {character.filter(people => people.name.includes(search))
                     .map(people => (
