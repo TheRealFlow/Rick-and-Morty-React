@@ -15,17 +15,10 @@ function App() {
             })();
     }, [])
 
-    let nextPage = () => {
-        setPageNumber(pageNumber+1);
-    }
-    let prevPage = () => {
-        setPageNumber(pageNumber-1);
-    }
-
     return (
         <>
-            <button onClick={prevPage}>Prev</button>
-            <button onClick={nextPage}>Next</button>
+            <button onClick={() => setPageNumber(pageNumber - 1)}>Prev</button>
+            <button onClick={() => setPageNumber(pageNumber + 1)}>Next</button>
             <CharacterGallery character={character}/>
         </>
   );
