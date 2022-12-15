@@ -24,8 +24,8 @@ function App() {
 
     return (
         <>
-            <button className={"Button"} onClick={prevCharacter}>Prev 20 Character</button>
-            <button className={"Button"} onClick={nextCharacter}>Next 20 Character</button>
+            <button onClick={prevCharacter}>Prev 20 Character</button>
+            <button onClick={nextCharacter}>Next 20 Character</button>
             <CharacterGallery character={character}/>
         </>
   );
