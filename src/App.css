@@ -7,6 +7,16 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.Link {
+  margin: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: black;
+}
+.Link:visited{
+  color: black;
+}
+
 .Gallery {
   display: flex;
   flex-wrap: wrap;

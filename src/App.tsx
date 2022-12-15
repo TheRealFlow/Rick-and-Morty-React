@@ -6,19 +6,26 @@ import axios from "axios";
 
 function App() {
     const [character, setCharacter] = useState([]);
-    const [pageNumber, setPageNumber] = useState(1);
+    const [loadChars, setLoadChars] = useState(1)
 
     useEffect( () => {
         (async () => {
-        const response = await axios.get(`https://rickandmortyapi.com/api/character/?page=${pageNumber}`)
+        const response = await axios.get("https://rickandmortyapi.com/api/character/?page=" + loadChars)
             setCharacter(response.data.results);
             })();
-    }, [])
+    }, [loadChars])
+
+    const nextCharacter = () => {
+        setLoadChars(loadChars + 1)
+    }
+    const prevCharacter = () => {
+        setLoadChars(loadChars - 1)
+    }
 
     return (
         <>
-            <button onClick={() => setPageNumber(pageNumber - 1)}>Prev</button>
-            <button onClick={() => setPageNumber(pageNumber + 1)}>Next</button>
+            <button className={"Button"} onClick={prevCharacter}>Prev 20 Character</button>
+            <button className={"Button"} onClick={nextCharacter}>Next 20 Character</button>
             <CharacterGallery character={character}/>
         </>
   );
