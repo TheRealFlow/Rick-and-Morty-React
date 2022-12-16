@@ -1,18 +1,18 @@
 import {useLocation, useNavigate} from "react-router-dom";
 
 
-export default function Hello() {
+export default function Detail() {
     const location = useLocation()
-    const {name} = location.state
+    const {char} = location.state
     const navigate = useNavigate();
 
     return (
-        <>
-            <h1>Hello {name}</h1>
-            <button onClick={() => {
+        <section>
+            <h1>{char}</h1>
+            <button className={"section-btn"} onClick={() => {
                 navigate("/")
             }
             }>Back</button>
-        </>
+        </section>
     )
 }

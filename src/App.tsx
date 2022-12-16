@@ -24,8 +24,14 @@ function App() {
 
     return (
         <>
-            <button onClick={prevCharacter}>Prev 20 Character</button>
-            <button onClick={nextCharacter}>Next 20 Character</button>
+            {loadChars <= 1 ?
+                <button disabled={true}>Prev 20 Character</button>
+                : <button onClick={prevCharacter}>Prev 20 Character</button> }
+
+            {loadChars >= 42 ?
+                <button disabled={true}>Next 20 Character</button>
+                : <button onClick={nextCharacter}>Next 20 Character</button> }
+
             <CharacterGallery character={character}/>
         </>
   );
